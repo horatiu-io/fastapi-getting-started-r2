@@ -1,0 +1,18 @@
+# The name of the project.
+name: fastapi-getting-started-r
+# The region where the project is deployed. Available regions: us-east-1, eu-central-1
+region: us-east-1
+# The version of the Genezio YAML configuration to parse.
+yamlVersion: 2
+backend:
+  path: ./
+  language:
+    name: python
+    packageManager: pip
+    runtime: python3.11.x  # Verifică că este Python 3.11.x, nu 3.13
+  functions:
+    - name: fast-api
+      path: ./
+      handler: app # Trebuie să fie doar `app`, nu `index.app`
+      entry: index.py
+      type: httpServer
