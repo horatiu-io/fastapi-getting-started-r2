@@ -1,7 +1,7 @@
 backend:
     functions:
         - entry: index.py
-          handler: app
+          handler: index.app
           name: function-faas-python
           path: ./
           type: aws
